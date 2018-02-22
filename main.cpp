@@ -20,7 +20,22 @@ cout<<"\n==GROCERY LIST MANAGER==";
   cout<<"\n (A)dd an item";
   cout<<"\n (Q)uit";
   cout<<"\nYour choice (A/Q): ";
-  cin>>input; 
+  cin>>input;
+  if (input == 'A' || input == 'a')
+  {
+  
+  if (index<5)
+  {
+  cout << "What is the item\n";
+  cin >> list[index];
+  index++;
+}
+   }
+  else 
+  {
+  cout << "You'll need a bigger list!\n";
+  
+}
 }
 while (input != 'q' && input != 'Q');
 
