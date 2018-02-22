@@ -26,7 +26,7 @@ cout<<"\n==GROCERY LIST MANAGER==";
   
   if (index<5)
   {
-  cout << "What is the item\n";
+  cout << "What is the item?\n";
   cin >> list[index];
   index++;
 }
