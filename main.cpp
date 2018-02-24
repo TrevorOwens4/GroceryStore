@@ -7,37 +7,43 @@ const int LIST_SIZE = 5;
 
 int main()
 {
-  string list[LIST_SIZE]; //array of 5 strings
-  int numItems = 0;
-  char input;
-  int index;
+        string list[LIST_SIZE]; //array of 5 strings
+        int numItems = 0;
+        char input;
+        int index;
+        string itemInput;
+        string item[LIST_SIZE];
 
-index = 0;
+        index = 0;
 
-do {
-cout<<"\n==GROCERY LIST MANAGER==";
-  cout<<"\nEnter your choice: ";
-  cout<<"\n (A)dd an item";
-  cout<<"\n (Q)uit";
-  cout<<"\nYour choice (A/Q): ";
-  cin>>input;
-  if (input == 'A' || input == 'a')
-  {
-  
-  if (index<5)
-  {
-  cout << "What is the item?\n";
-  cin >> list[index];
-  index++;
-}
-   }
-  else 
-  {
-  cout << "You'll need a bigger list!\n";
-  
-}
-}
+        do {
+                cout<<"\n==GROCERY LIST MANAGER==";
+                cout<<"\nEnter your choice: ";
+                cout<<"\n (A)dd an item";
+                cout<<"\n (Q)uit";
+                cout<<"\nYour choice (A/Q): ";
+                cin>>input;
+                if (input == 'A' || input == 'a')
+                {
+                        cout << "What is the item?\n";
+                        cin >> itemInput;
+                
+
+                if (index<5)
+                {
+                    item[index]= itemInput;
+                        index++;
+                }
+                else 
+                {
+                        cout << "You'll need a bigger list!";
+                }
+                }
+        }
+
+
+
 while (input != 'q' && input != 'Q');
 
-  return 0;
+return 0;
 }
