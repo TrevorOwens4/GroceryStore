@@ -27,38 +27,38 @@ int main()
                 {
                         cout << "What is the item?\n";
                         cin >> itemInput;
-                
 
-                if (index<5)
-                {
-                    item[index]= itemInput;
-                        index++;
-                }
-                else 
-                {
-                        cout << "You'll need a bigger list!\n";
-                }
+
+                        if (index<5)
+                        {
+                                item[index]= itemInput;
+                                index++;
+                        }
+                        else 
+                        {
+                                cout << "You'll need a bigger list!\n";
+                        }
                 }
         }
 
 
 
-while (input != 'q' && input != 'Q');
+        while (input != 'q' && input != 'Q');
 
-index = 0;
-cout << "==ITEMS TO BUY==" << endl;
+        index = 0;
+        cout << "==ITEMS TO BUY==" << endl;
 
-for(index = 0; index < LIST_SIZE; index ++)
-{
-cout << index + 1 << " " <<  item[index] << endl;
-}
-
-
+        for(index = 0; index < LIST_SIZE; index ++)
+        {
+                cout << index + 1 << " " <<  item[index] << endl;
+        }
 
 
 
 
 
 
-return 0;
+
+
+        return 0;
 }
