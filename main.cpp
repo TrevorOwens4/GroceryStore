@@ -46,7 +46,7 @@ int main()
 while (input != 'q' && input != 'Q');
 
 index = 0;
-cout << "\n==ITEMS TO BUY==" << endl;
+cout << "==ITEMS TO BUY==" << endl;
 
 for(index = 0; index < LIST_SIZE; index ++)
 {
