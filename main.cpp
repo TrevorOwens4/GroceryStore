@@ -1,21 +1,16 @@
 //Author: Trevor Owens
 #include<iostream>
-#include<string>
+#include<vector>
 using namespace std;
 
-const int LIST_SIZE = 5;
 
 int main()
 {
-        string list[LIST_SIZE]; //array of 5 strings
-        int numItems = 0;
         char input;
+        string items;
+        vector <string> list;
         int index;
-        string itemInput;
-        string item[LIST_SIZE];
-
         index = 0;
-
         do {
                 cout<<"\n==GROCERY LIST MANAGER==";
                 cout<<"\nEnter your choice: ";
@@ -26,39 +21,26 @@ int main()
                 if (input == 'A' || input == 'a')
                 {
                         cout << "What is the item?\n";
-                        cin >> itemInput;
-
-
-                        if (index<5)
-                        {
-                                item[index]= itemInput;
-                                index++;
-                        }
-                        else 
-                        {
-                                cout << "You'll need a bigger list!\n";
-                        }
+                        cin >> items;
+                        list.push_back(items);
                 }
+
+
         }
-
-
 
         while (input != 'q' && input != 'Q');
-
         index = 0;
-        cout << "==ITEMS TO BUY==" << endl;
-
-        for(index = 0; index < LIST_SIZE; index ++)
+        if (list.empty() == false)
         {
-                cout << index + 1 << " " <<  item[index] << endl;
+                cout << "==ITEMS TO BUY==" << endl;
+                for(index = 0; index < list.size(); index ++)
+                {             
+                        cout << index + 1 << " " << list[index] << endl;
+                }
         }
-
-
-
-
-
-
-
-
+        else 
+        {
+                cout << "No items to buy!" << endl;
+        }
         return 0;
 }
